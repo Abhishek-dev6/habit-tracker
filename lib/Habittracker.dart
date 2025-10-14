@@ -32,7 +32,7 @@ class _HabitState extends State<Habit> {
               ),
               SizedBox(height: 10),
               Text(
-                "Keep a track of your habits",
+                "KEEP a track of your habits",
                 style: GoogleFonts.poppins(
                   fontWeight: FontWeight.w400,
                   fontSize: 14,
