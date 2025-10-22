@@ -17,9 +17,8 @@ class _SettingsState extends State<Settings> {
       child: Scaffold(
         body: Center(
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(20),
             child: Column(
-              
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Row(
@@ -38,7 +37,7 @@ class _SettingsState extends State<Settings> {
                 SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-          
+
                   children: [
                     Container(
                       width: 345,
@@ -116,9 +115,9 @@ class _SettingsState extends State<Settings> {
                               ],
                             ),
                           ),
-                              
+
                           Divider(color: Color(0XFFC5BBB1), thickness: 2),
-                              
+
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Row(
@@ -182,9 +181,9 @@ class _SettingsState extends State<Settings> {
                               ],
                             ),
                           ),
-                                
+
                           Divider(color: Color(0XFFC5BBB1), thickness: 2),
-                                
+
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Row(
@@ -248,9 +247,9 @@ class _SettingsState extends State<Settings> {
                               ],
                             ),
                           ),
-                                
+
                           Divider(color: Color(0XFFC5BBB1), thickness: 2),
-                                
+
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Row(
@@ -275,9 +274,13 @@ class _SettingsState extends State<Settings> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    GestureDetector(onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>signin()));
-                    },
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => signin()),
+                        );
+                      },
                       child: Container(
                         width: 345,
                         height: 51,
