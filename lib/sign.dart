@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 //import 'package:habittracker/Habittracker.dart';
 import 'package:habittracker/dashboard.dart';
 import 'package:habittracker/register.dart';
+import 'package:habittracker/button.dart';
 
 class signin extends StatefulWidget {
   const signin({super.key});
@@ -48,12 +49,11 @@ class _signinState extends State<signin> {
                         fillColor: Color(0XFFF8F3EE),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
-                          borderSide: BorderSide.none
-                          
-                        ),focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide.none
-                        )
-                        
+                          borderSide: BorderSide.none,
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide.none,
+                        ),
                       ),
                       validator: (value) {
                         if (value == null || value.isEmpty) {
@@ -80,9 +80,10 @@ class _signinState extends State<signin> {
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
                           borderSide: BorderSide.none,
-                        ),focusedBorder: OutlineInputBorder(
+                        ),
+                        focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide.none,
-                        )
+                        ),
                       ),
                       validator: (value) {
                         if (value == null || value.isEmpty) {
@@ -112,31 +113,42 @@ class _signinState extends State<signin> {
                   //     ),
                   //   ),
                   // ),
-                  GestureDetector(
+                  // GestureDetector(
+                  //   onTap: () {
+                  //     Navigator.push(
+                  //       context,
+                  //       MaterialPageRoute(builder: (context) => Dashboard()),
+                  //     );
+                  //   },
+                  //   child: Container(
+                  //     width: 345,
+                  //     height: 51,
+                  //     decoration: BoxDecoration(
+                  //       borderRadius: BorderRadius.circular(30),
+                  //       color: Color(0XFFFF5C00),
+                  //     ),
+                  //     child: Center(
+                  //       child: Text(
+                  //         "Sign in",
+                  //         style: GoogleFonts.poppins(
+                  //           fontWeight: FontWeight.w400,
+                  //           fontSize: 14,
+                  //           color: Color(0XFFFFFFFF),
+                  //         ),
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
+                  Custom_button(
+                    text: "Sign in",
                     onTap: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => Dashboard()),
                       );
                     },
-                    child: Container(
-                      width: 345,
-                      height: 51,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: Color(0XFFFF5C00),
-                      ),
-                      child: Center(
-                        child: Text(
-                          "Sign in",
-                          style: GoogleFonts.poppins(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 14,
-                            color: Color(0XFFFFFFFF),
-                          ),
-                        ),
-                      ),
-                    ),
+                    color: Color(0XFFFF5C00),
+                    textcolor: Color(0XFFFFFFFF),
                   ),
                 ],
               ),

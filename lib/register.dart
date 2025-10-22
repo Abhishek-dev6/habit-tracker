@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:habittracker/button.dart';
 import 'package:habittracker/sign.dart';
 
 class Register extends StatefulWidget {
@@ -80,9 +81,10 @@ class _RegisterState extends State<Register> {
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide.none,
                           borderRadius: BorderRadius.circular(30),
-                        ),focusedBorder:OutlineInputBorder(
-                          borderSide: BorderSide.none
-                        ) ,
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide.none,
+                        ),
                         filled: true,
                         fillColor: Color(0XFFF8F3EE),
                       ),
@@ -113,11 +115,11 @@ class _RegisterState extends State<Register> {
                           ),
                         ),
                         enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide.none ,
+                          borderSide: BorderSide.none,
                           borderRadius: BorderRadius.circular(30),
                         ),
                         focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide.none
+                          borderSide: BorderSide.none,
                         ),
                         filled: true,
                         fillColor: Color(0XFFF8F3EE),
@@ -149,8 +151,9 @@ class _RegisterState extends State<Register> {
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide.none,
                           borderRadius: BorderRadius.circular(30),
-                        ),focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide.none
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide.none,
                         ),
                         filled: true,
                         fillColor: Color(0XFFF8F3EE),
@@ -167,33 +170,43 @@ class _RegisterState extends State<Register> {
                     ),
                   ),
                   SizedBox(height: 10),
-                  Container(
-                    width: 345,
-                    height: 51,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(30),
+                  // Container(
+                  //   width: 345,
+                  //   height: 51,
+                  //   decoration: BoxDecoration(
+                  //     borderRadius: BorderRadius.circular(30),
+                  //     color: Color(0XFFFF5C00),
+                  //   ),
+                  Center(
+                    // child: GestureDetector(
+                    //   onTap: () {
+                    //     if (_formKey.currentState!.validate()) {
+                    //       Navigator.push(
+                    //         context,
+                    //         MaterialPageRoute(builder: (context) => signin()),
+                    //       );
+                    //     }
+                    //   },
+                    //   child: Text(
+                    //     "Register",
+                    //     style: GoogleFonts.poppins(
+                    //       fontWeight: FontWeight.w400,
+                    //       fontSize: 14,
+                    //       letterSpacing: 0,
+                    //       color: Color(0XFFFFFFFF),
+                    //     ),
+                    //   ),
+                    // ),
+                    child: Custom_button(
+                      text: "Register",
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => signin()),
+                        );
+                      },
                       color: Color(0XFFFF5C00),
-                    ),
-                    child: Center(
-                      child: GestureDetector(
-                        onTap: () {
-                          if (_formKey.currentState!.validate()) {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => signin()),
-                            );
-                          }
-                        },
-                        child: Text(
-                          "Register",
-                          style: GoogleFonts.poppins(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 14,
-                            letterSpacing: 0,
-                            color: Color(0XFFFFFFFF),
-                          ),
-                        ),
-                      ),
+                      textcolor: Color(0XFFFFFFFF),
                     ),
                   ),
                 ],
