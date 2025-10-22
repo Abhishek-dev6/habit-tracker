@@ -18,6 +18,7 @@ class _HabitState extends State<Habit> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           toolbarHeight: 100,
           title: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
