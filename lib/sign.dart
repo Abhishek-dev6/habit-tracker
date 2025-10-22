@@ -46,9 +46,14 @@ class _signinState extends State<signin> {
                         labelStyle: TextStyle(color: Color(0XFFC5BBB1)),
                         filled: true,
                         fillColor: Color(0XFFF8F3EE),
-                        border: OutlineInputBorder(
+                        enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
-                        ),
+                          borderSide: BorderSide.none
+                          
+                        ),focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide.none
+                        )
+                        
                       ),
                       validator: (value) {
                         if (value == null || value.isEmpty) {
@@ -69,11 +74,15 @@ class _signinState extends State<signin> {
                       obscureText: true,
                       decoration: InputDecoration(
                         labelText: "Password",
+                        labelStyle: TextStyle(color: Color(0XFFC5BBB1)),
                         filled: true,
                         fillColor: Color(0XFFF8F3EE),
-                        border: OutlineInputBorder(
+                        enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
-                        ),
+                          borderSide: BorderSide.none,
+                        ),focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide.none,
+                        )
                       ),
                       validator: (value) {
                         if (value == null || value.isEmpty) {
