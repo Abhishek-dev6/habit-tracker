@@ -10,15 +10,16 @@ class Habit extends StatefulWidget {
 
 class _HabitState extends State<Habit> {
   bool switch1 = false;
-  bool switch2=true;
-  bool switch3=false;
+  bool switch2 = true;
+  bool switch3 = false;
+  double progress=0.89;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
+        appBar: AppBar(
+          toolbarHeight: 100,
+          title: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
@@ -40,152 +41,162 @@ class _HabitState extends State<Habit> {
                   color: Color(0XFF000000),
                 ),
               ),
-              SizedBox(height: 20),
-              Center(
-                child: Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    SizedBox(
-                      height: 196,
-                      width: 196,
-                      child: CircularProgressIndicator(
-                        backgroundColor: Color(0XFFF0F0F0),
-                        valueColor: AlwaysStoppedAnimation<Color>(
-                          Color(0XFFFF5C00),
+            ],
+          ),
+        ),
+        body: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [SizedBox(height: 30,),
+                Center(
+                  child: Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      SizedBox(
+                        height: 196,
+                        width: 196,
+                        child: CircularProgressIndicator(
+                          value: progress,
+                          backgroundColor: Color(0XFFF0F0F0),
+                          valueColor: AlwaysStoppedAnimation<Color>(
+                            Color(0XFFFF5C00),
+                          ),
+                          strokeWidth: 10,
                         ),
-                        strokeWidth: 10,
                       ),
+                      Column(
+                        children: [
+                          Text(
+                            "89%",
+                            style: GoogleFonts.playfairDisplay(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20,
+                              color: Color(0XFF000000),
+                            ),
+                          ),
+                          Text(
+                            "         of tasks \n completed weekly",
+                            style: GoogleFonts.poppins(
+                              fontWeight: FontWeight.w400,
+                              fontSize: 14,
+                              letterSpacing: 0,
+                              color: Color(0XFF000000),
+                            ),
+                          ),
+                         
+                        ],
+                      ),
+                    ],
+                  ),
+                ),SizedBox(height: 50,),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    "Tracker Settings",
+                    style: GoogleFonts.playfairDisplay(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                      letterSpacing: 0,
+                      color: Color(0XFF000000),
                     ),
-                    Column(
-                      children: [
-                        Text(
-                          "89%",
-                          style: GoogleFonts.playfairDisplay(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20,
-                            color: Color(0XFF000000),
+                  ),
+                ),
+                SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      width: 345,
+                      height: 180,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(25),
+                        color: Color(0XFFF8F3EE),
+                      ),
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Track daily",
+                                style: GoogleFonts.poppins(
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 14,
+                                  letterSpacing: 0,
+                                  color: Color(0XFF000000),
+                                ),
+                              ),
+                              Switch(
+                                activeColor: Color(0XFFFF5C00),
+                                inactiveThumbColor: Color(0XFFFF5C00),
+                                value: switch1,
+                                onChanged: (bool value) {
+                                  setState(() {
+                                    switch1 = value;
+                                  });
+                                },
+                              ),
+                            ],
                           ),
-                        ),
-                        Text(
-                          "         of tasks \n completed weekly",
-                          style: GoogleFonts.poppins(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 14,
-                            letterSpacing: 0,
-                            color: Color(0XFF000000),
+                          Divider(color: Color(0XFFC5BBB1), thickness: 2),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Track Weekly",
+                                style: GoogleFonts.poppins(
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 14,
+                                  letterSpacing: 0,
+                                  color: Color(0XFF000000),
+                                ),
+                              ),
+                              Switch(
+                                activeColor: Color(0XFFFF5C00),
+                                inactiveThumbColor: Color(0XFFFF5C00),
+                                value: switch2,
+                                onChanged: (bool value) {
+                                  setState(() {
+                                    switch2 = value;
+                                  });
+                                },
+                              ),
+                            ],
                           ),
-                        ),
-                        SizedBox(height: 10),
-                      ],
+                          Divider(color: Color(0XFFC5BBB1), thickness: 2),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Track monthly",
+                                style: GoogleFonts.poppins(
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 14,
+                                  letterSpacing: 0,
+                                  color: Color(0XFF000000),
+                                ),
+                              ),
+                              Switch(
+                                activeColor: Color(0XFFFF5C00),
+                                inactiveThumbColor: Color(0XFFFF5C00),
+                                value: switch3,
+                                onChanged: (bool value) {
+                                  setState(() {
+                                    switch3 = value;
+                                  });
+                                },
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
-              ),
-              Text(
-                "Tracker Settings",
-                style: GoogleFonts.playfairDisplay(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
-                  letterSpacing: 0,
-                  color: Color(0XFF000000),
-                ),
-              ),SizedBox(height: 10),
-             Container(
-                width: 345,
-                 height: 180,
-                 decoration: BoxDecoration(
-                   borderRadius: BorderRadius.circular(25),
-                   color: Color(0XFFF8F3EE),
-                 ),
-                 child: Column(
-                   children: [
-                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                              "Track daily",
-                              style: GoogleFonts.poppins(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 14,
-                                letterSpacing: 0,
-                                color: Color(0XFF000000),
-                              ),
-                            ), 
-                            Switch(
-                              activeColor: Color(0XFFFF5C00),
-                              inactiveThumbColor: Color(0XFFFF5C00),
-                              value: switch1,
-                              onChanged: (bool value) {
-                                setState(() {
-                                  switch1 = value;
-                                });
-                              },
-                            ),
-                      ],
-                     ),
-                     Divider(
-                      color: Color(0XFFC5BBB1),
-                      thickness: 2,
-      
-                     ),
-                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                              "Track Weekly",
-                              style: GoogleFonts.poppins(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 14,
-                                letterSpacing: 0,
-                                color: Color(0XFF000000),
-                              ),
-                            ), 
-                            Switch(
-                              activeColor: Color(0XFFFF5C00),
-                              inactiveThumbColor: Color(0XFFFF5C00),
-                              value: switch2,
-                              onChanged: (bool value) {
-                                setState(() {
-                                  switch2 = value;
-                                });
-                              },
-                            ),
-                      ],
-                     ),
-                     Divider(
-                      color: Color(0XFFC5BBB1),
-                      thickness: 2,
-                     ),
-                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                              "Track monthly",
-                              style: GoogleFonts.poppins(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 14,
-                                letterSpacing: 0,
-                                color: Color(0XFF000000),
-                              ),
-                            ), 
-                            Switch(
-                              activeColor: Color(0XFFFF5C00),
-                              inactiveThumbColor: Color(0XFFFF5C00),
-                              value: switch3,
-                              onChanged: (bool value) {
-                                setState(() {
-                                  switch3 = value;
-                                });
-                              },
-                            ),
-                      ],
-                     ),
-      
-                   ],
-                 ),
-             
-             )
-            ],
+              ],
+            ),
           ),
         ),
       ),
