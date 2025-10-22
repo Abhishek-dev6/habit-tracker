@@ -14,233 +14,136 @@ class _SettingsState extends State<Settings> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            // crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "Notification Settings",
-                style: GoogleFonts.poppins(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 14,
-                  color: Color(0XFF000000),
-                ),
-              ),
-              SizedBox(height: 20),
-              Container(
-                width: 345,
-                height: 55,
-                padding: EdgeInsets.all(15),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25),
-                  color: Color(0XFFF8F3EE),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        body: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Text(
-                      "Notifications",
+                      "Notification Settings",
                       style: GoogleFonts.poppins(
                         fontWeight: FontWeight.w400,
                         fontSize: 14,
                         color: Color(0XFF000000),
                       ),
                     ),
-                    Switch(
-                      activeColor: Color(0XFFFF5C00),
-                      value: switch4,
-                      onChanged: (bool value) {
-                        setState(() {
-                          switch4 = value;
-                        });
-                      },
-                    ),
                   ],
                 ),
-              ),
-              SizedBox(height: 20),
-              Text(
-                "About",
-                style: GoogleFonts.poppins(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 14,
-                  color: Color(0XFF000000),
-                ),
-              ),
-              SizedBox(height: 10),
-              Container(
-                width: 345,
-                height: 103.79,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25),
-                  color: Color(0XFFF8F3EE),
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+          
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    Container(
+                      width: 345,
+                      height: 55,
+                      padding: EdgeInsets.all(15),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(25),
+                        color: Color(0XFFF8F3EE),
+                      ),
                       child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            "Terms of service",
+                            "Notifications",
                             style: GoogleFonts.poppins(
                               fontWeight: FontWeight.w400,
                               fontSize: 14,
                               color: Color(0XFF000000),
                             ),
                           ),
-                        ],
-                      ),
-                    ),
-          
-                    Divider(color: Color(0XFFC5BBB1), thickness: 2),
-          
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        children: [
-                          Text(
-                            "Privacy policy",
-                            style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.w400,
-                              fontSize: 14,
-                              color: Color(0XFF000000),
-                            ),
+                          Switch(
+                            activeColor: Color(0XFFFF5C00),
+                            value: switch4,
+                            onChanged: (bool value) {
+                              setState(() {
+                                switch4 = value;
+                              });
+                            },
                           ),
                         ],
                       ),
                     ),
                   ],
                 ),
-              ),
-              SizedBox(height: 20),
-              Text(
-                "Feedback and Support",
-                style: GoogleFonts.poppins(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 14,
-                  color: Color(0XFF000000),
-                ),
-              ),
-              SizedBox(height: 20),
-              Container(
-                width: 345,
-                height: 103.79,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25),
-                  color: Color(0XFFF8F3EE),
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        children: [
-                          Text(
-                            "Rate Our app",
-                            style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.w400,
-                              fontSize: 14,
-                              color: Color(0XFF000000),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-          
-                    Divider(color: Color(0XFFC5BBB1), thickness: 2),
-          
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        children: [
-                          Text(
-                            "FAQs",
-                            style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.w400,
-                              fontSize: 14,
-                              color: Color(0XFF000000),
-                            ),
-                          ),
-                        ],
+                    Text(
+                      "About",
+                      style: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 14,
+                        color: Color(0XFF000000),
                       ),
                     ),
                   ],
                 ),
-              ),
-              SizedBox(height: 20),
-              Text(
-                "Account management",
-                style: GoogleFonts.poppins(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 14,
-                  color: Color(0XFF000000),
-                ),
-              ),
-              SizedBox(height: 20),
-              Container(
-                width: 345,
-                height: 103.79,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25),
-                  color: Color(0XFFF8F3EE),
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        children: [
-                          Text(
-                            "Email adress & password",
-                            style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.w400,
-                              fontSize: 14,
-                              color: Color(0XFF000000),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-          
-                    Divider(color: Color(0XFFC5BBB1), thickness: 2),
-          
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        children: [
-                          Text(
-                            "Deactivate account",
-                            style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.w400,
-                              fontSize: 14,
-                              color: Color(0XFF000000),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(height: 20),
-              Container(
-                width: 345,
-                height: 51,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30),
-                  color: Color(0XFFF0F0F0),
-                ),
-                child: Row(
+                SizedBox(height: 10),
+                Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    Container(
+                      width: 345,
+                      height: 103.79,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(25),
+                        color: Color(0XFFF8F3EE),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(
+                              children: [
+                                Text(
+                                  "Terms of service",
+                                  style: GoogleFonts.poppins(
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 14,
+                                    color: Color(0XFF000000),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                              
+                          Divider(color: Color(0XFFC5BBB1), thickness: 2),
+                              
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(
+                              children: [
+                                Text(
+                                  "Privacy policy",
+                                  style: GoogleFonts.poppins(
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 14,
+                                    color: Color(0XFF000000),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
                     Text(
-                      "Logout",
+                      "Feedback and Support",
                       style: GoogleFonts.poppins(
                         fontWeight: FontWeight.w400,
                         fontSize: 14,
@@ -249,8 +152,153 @@ class _SettingsState extends State<Settings> {
                     ),
                   ],
                 ),
-              ),
-            ],
+                SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      width: 345,
+                      height: 103.79,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(25),
+                        color: Color(0XFFF8F3EE),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(
+                              children: [
+                                Text(
+                                  "Rate Our app",
+                                  style: GoogleFonts.poppins(
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 14,
+                                    color: Color(0XFF000000),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                                
+                          Divider(color: Color(0XFFC5BBB1), thickness: 2),
+                                
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(
+                              children: [
+                                Text(
+                                  "FAQs",
+                                  style: GoogleFonts.poppins(
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 14,
+                                    color: Color(0XFF000000),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Account management",
+                      style: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 14,
+                        color: Color(0XFF000000),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      width: 345,
+                      height: 103.79,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(25),
+                        color: Color(0XFFF8F3EE),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(
+                              children: [
+                                Text(
+                                  "Email adress & password",
+                                  style: GoogleFonts.poppins(
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 14,
+                                    color: Color(0XFF000000),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                                
+                          Divider(color: Color(0XFFC5BBB1), thickness: 2),
+                                
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(
+                              children: [
+                                Text(
+                                  "Deactivate account",
+                                  style: GoogleFonts.poppins(
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 14,
+                                    color: Color(0XFF000000),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      width: 345,
+                      height: 51,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30),
+                        color: Color(0XFFF0F0F0),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Logout",
+                            style: GoogleFonts.poppins(
+                              fontWeight: FontWeight.w400,
+                              fontSize: 14,
+                              color: Color(0XFF000000),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),
