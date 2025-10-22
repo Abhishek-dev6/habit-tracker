@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:habittracker/sign.dart';
 
 class Settings extends StatefulWidget {
   const Settings({super.key});
@@ -274,25 +275,29 @@ class _SettingsState extends State<Settings> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
-                      width: 345,
-                      height: 51,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: Color(0XFFF0F0F0),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Logout",
-                            style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.w400,
-                              fontSize: 14,
-                              color: Color(0XFF000000),
+                    GestureDetector(onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>signin()));
+                    },
+                      child: Container(
+                        width: 345,
+                        height: 51,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(30),
+                          color: Color(0XFFF0F0F0),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Logout",
+                              style: GoogleFonts.poppins(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 14,
+                                color: Color(0XFF000000),
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ],
