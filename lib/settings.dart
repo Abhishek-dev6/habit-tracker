@@ -91,52 +91,55 @@ class _SettingsState extends State<Settings> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
-                      width: 345,
-                      height: 103.79,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(25),
-                        color: Color(0XFFF8F3EE),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Row(
-                              children: [
-                                Text(
-                                  "Terms of service",
-                                  style: GoogleFonts.poppins(
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 14,
-                                    color: Color(0XFF000000),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
+                    // Container(
+                    //   width: 345,
+                    //   height: 103.79,
+                    //   decoration: BoxDecoration(
+                    //     borderRadius: BorderRadius.circular(25),
+                    //     color: Color(0XFFF8F3EE),
+                    //   ),
+                    //   child: Column(
+                    //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    //     children: [
+                    //       Padding(
+                    //         padding: const EdgeInsets.all(8.0),
+                    //         child: 
+                    //         Row(
+                    //           children: [
+                    //             Text(
+                    //               "Terms of service",
+                    //               style: GoogleFonts.poppins(
+                    //                 fontWeight: FontWeight.w400,
+                    //                 fontSize: 14,
+                    //                 color: Color(0XFF000000),
+                    //               ),
+                    //             ),
+                                
+                    //           ],
+                    //         ),
+                    //       ),
 
-                          Divider(color: Color(0XFFC5BBB1), thickness: 2),
+                    //       Divider(color: Color(0XFFC5BBB1), thickness: 2),
 
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Row(
-                              children: [
-                                Text(
-                                  "Privacy policy",
-                                  style: GoogleFonts.poppins(
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 14,
-                                    color: Color(0XFF000000),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
+                    //       Padding(
+                    //         padding: const EdgeInsets.all(8.0),
+                    //         child: Row(
+                    //           children: [
+                    //             Text(
+                    //               "Privacy policy",
+                    //               style: GoogleFonts.poppins(
+                    //                 fontWeight: FontWeight.w400,
+                    //                 fontSize: 14,
+                    //                 color: Color(0XFF000000),
+                    //               ),
+                    //             ),
+                    //           ],
+                    //         ),
+                    //       ),
+                    //     ],
+                    //   ),
+                    // ),
+                    
                   ],
                 ),
                 SizedBox(height: 20),
