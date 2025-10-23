@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:habittracker/button.dart';
+import 'package:habittracker/container.dart';
 import 'package:habittracker/sign.dart';
 
 class Settings extends StatefulWidget {
@@ -88,58 +89,12 @@ class _SettingsState extends State<Settings> {
                   ],
                 ),
                 SizedBox(height: 10),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                Column(
                   children: [
-                    // Container(
-                    //   width: 345,
-                    //   height: 103.79,
-                    //   decoration: BoxDecoration(
-                    //     borderRadius: BorderRadius.circular(25),
-                    //     color: Color(0XFFF8F3EE),
-                    //   ),
-                    //   child: Column(
-                    //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    //     children: [
-                    //       Padding(
-                    //         padding: const EdgeInsets.all(8.0),
-                    //         child: 
-                    //         Row(
-                    //           children: [
-                    //             Text(
-                    //               "Terms of service",
-                    //               style: GoogleFonts.poppins(
-                    //                 fontWeight: FontWeight.w400,
-                    //                 fontSize: 14,
-                    //                 color: Color(0XFF000000),
-                    //               ),
-                    //             ),
-                                
-                    //           ],
-                    //         ),
-                    //       ),
-
-                    //       Divider(color: Color(0XFFC5BBB1), thickness: 2),
-
-                    //       Padding(
-                    //         padding: const EdgeInsets.all(8.0),
-                    //         child: Row(
-                    //           children: [
-                    //             Text(
-                    //               "Privacy policy",
-                    //               style: GoogleFonts.poppins(
-                    //                 fontWeight: FontWeight.w400,
-                    //                 fontSize: 14,
-                    //                 color: Color(0XFF000000),
-                    //               ),
-                    //             ),
-                    //           ],
-                    //         ),
-                    //       ),
-                    //     ],
-                    //   ),
-                    // ),
-                    
+                    Customcontainer( 
+                      toptext: "Terms of service",
+                      bottomtext: "Privacy Policy",
+                    ),
                   ],
                 ),
                 SizedBox(height: 20),
@@ -157,55 +112,61 @@ class _SettingsState extends State<Settings> {
                   ],
                 ),
                 SizedBox(height: 20),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.center,
+                //   children: [
+                //     Container(
+                //       width: 345,
+                //       height: 103.79,
+                //       decoration: BoxDecoration(
+                //         borderRadius: BorderRadius.circular(25),
+                //         color: Color(0XFFF8F3EE),
+                //       ),
+                //       child: Column(
+                //         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                //         children: [
+                //           Padding(
+                //             padding: const EdgeInsets.all(8.0),
+                //             child: Row(
+                //               children: [
+                //                 Text(
+                //                   "Rate Our app",
+                //                   style: GoogleFonts.poppins(
+                //                     fontWeight: FontWeight.w400,
+                //                     fontSize: 14,
+                //                     color: Color(0XFF000000),
+                //                   ),
+                //                 ),
+                //               ],
+                //             ),
+                //           ),
+
+                //           Divider(color: Color(0XFFC5BBB1), thickness: 2),
+
+                //           Padding(
+                //             padding: const EdgeInsets.all(8.0),
+                //             child: Row(
+                //               children: [
+                //                 Text(
+                //                   "FAQs",
+                //                   style: GoogleFonts.poppins(
+                //                     fontWeight: FontWeight.w400,
+                //                     fontSize: 14,
+                //                     color: Color(0XFF000000),
+                //                   ),
+                //                 ),
+                //               ],
+                //             ),
+                //           ),
+                //         ],
+                //       ),
+                //     ),
+                //   ],
+                // ),
+
+                Column(
                   children: [
-                    Container(
-                      width: 345,
-                      height: 103.79,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(25),
-                        color: Color(0XFFF8F3EE),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Row(
-                              children: [
-                                Text(
-                                  "Rate Our app",
-                                  style: GoogleFonts.poppins(
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 14,
-                                    color: Color(0XFF000000),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-
-                          Divider(color: Color(0XFFC5BBB1), thickness: 2),
-
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Row(
-                              children: [
-                                Text(
-                                  "FAQs",
-                                  style: GoogleFonts.poppins(
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 14,
-                                    color: Color(0XFF000000),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
+                    Customcontainer(toptext: "Rate Our app", bottomtext: "FAQs")
                   ],
                 ),
                 SizedBox(height: 20),
@@ -223,55 +184,60 @@ class _SettingsState extends State<Settings> {
                   ],
                 ),
                 SizedBox(height: 20),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.center,
+                //   children: [
+                //     Container(
+                //       width: 345,
+                //       height: 103.79,
+                //       decoration: BoxDecoration(
+                //         borderRadius: BorderRadius.circular(25),
+                //         color: Color(0XFFF8F3EE),
+                //       ),
+                //       child: Column(
+                //         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                //         children: [
+                //           Padding(
+                //             padding: const EdgeInsets.all(8.0),
+                //             child: Row(
+                //               children: [
+                //                 Text(
+                //                   "Email adress & password",
+                //                   style: GoogleFonts.poppins(
+                //                     fontWeight: FontWeight.w400,
+                //                     fontSize: 14,
+                //                     color: Color(0XFF000000),
+                //                   ),
+                //                 ),
+                //               ],
+                //             ),
+                //           ),
+
+                //           Divider(color: Color(0XFFC5BBB1), thickness: 2),
+
+                //           Padding(
+                //             padding: const EdgeInsets.all(8.0),
+                //             child: Row(
+                //               children: [
+                //                 Text(
+                //                   "Deactivate account",
+                //                   style: GoogleFonts.poppins(
+                //                     fontWeight: FontWeight.w400,
+                //                     fontSize: 14,
+                //                     color: Color(0XFF000000),
+                //                   ),
+                //                 ),
+                //               ],
+                //             ),
+                //           ),
+                //         ],
+                //       ),
+                //     ),
+                //   ],
+                // ),
+                Column(
                   children: [
-                    Container(
-                      width: 345,
-                      height: 103.79,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(25),
-                        color: Color(0XFFF8F3EE),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Row(
-                              children: [
-                                Text(
-                                  "Email adress & password",
-                                  style: GoogleFonts.poppins(
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 14,
-                                    color: Color(0XFF000000),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-
-                          Divider(color: Color(0XFFC5BBB1), thickness: 2),
-
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Row(
-                              children: [
-                                Text(
-                                  "Deactivate account",
-                                  style: GoogleFonts.poppins(
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 14,
-                                    color: Color(0XFF000000),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
+                    Customcontainer(toptext: "Email adress & password", bottomtext: "Deactivate account")
                   ],
                 ),
                 SizedBox(height: 20),
@@ -308,7 +274,6 @@ class _SettingsState extends State<Settings> {
                       //   ),
                       // ),
                       child: Custom_button(
-                        
                         text: "Logout",
                         onTap: () {
                           Navigator.push(
