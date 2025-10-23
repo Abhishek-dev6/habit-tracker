@@ -10,36 +10,52 @@ class dash extends StatefulWidget {
 }
 
 class _dashState extends State<dash> {
-
   bool ischecked1 = false;
   bool ischecked2 = false;
   bool ischecked3 = false;
 
-  
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        toolbarHeight: 80,
+        title: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Text(
+                  "Dashboard",
+                  style: GoogleFonts.playfairDisplay(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 36,
+                    color: Colors.black,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Text(
+                  "Hello, it's Monday the 8th of April",
+                  style: GoogleFonts.poppins(fontSize: 14),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: SingleChildScrollView(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+           crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Text(
-                "Dashboard",
-                style: GoogleFonts.playfairDisplay(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 36,
-                  color: Colors.black,
-                ),
-              ),
-              SizedBox(height: 10),
-              Text(
-                "Hello, it's Monday the 8th of April",
-                style: GoogleFonts.poppins(fontSize: 14),
-              ),
-              SizedBox(height: 20),
+            
               Text(
                 "Tasks",
                 style: GoogleFonts.playfairDisplay(
@@ -107,7 +123,11 @@ class _dashState extends State<dash> {
                               style: TextStyle(color: Colors.white),
                             ),
                             SizedBox(width: 8),
-                            Image.asset('assets/images/tick.png', height: 20, width: 19),
+                            Image.asset(
+                              'assets/images/tick.png',
+                              height: 20,
+                              width: 19,
+                            ),
                           ],
                         ),
                       ),
@@ -134,10 +154,17 @@ class _dashState extends State<dash> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Complete essay",
-                        style: GoogleFonts.playfairDisplay(fontSize: 20, fontWeight: FontWeight.bold)),
+                    Text(
+                      "Complete essay",
+                      style: GoogleFonts.playfairDisplay(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                     SizedBox(height: 10),
-                    Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit"),
+                    Text(
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                    ),
                     SizedBox(height: 10),
                     Container(
                       width: 134,
@@ -151,7 +178,11 @@ class _dashState extends State<dash> {
                         children: [
                           Text("Completed"),
                           SizedBox(width: 8),
-                          Image.asset('assets/images/hand.png', height: 20, width: 19),
+                          Image.asset(
+                            'assets/images/hand.png',
+                            height: 20,
+                            width: 19,
+                          ),
                         ],
                       ),
                     ),
