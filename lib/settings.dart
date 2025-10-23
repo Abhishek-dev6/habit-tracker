@@ -91,7 +91,7 @@ class _SettingsState extends State<Settings> {
                 SizedBox(height: 10),
                 Column(
                   children: [
-                    Customcontainer( 
+                    Customcontainer(
                       toptext: "Terms of service",
                       bottomtext: "Privacy Policy",
                     ),
@@ -112,6 +112,7 @@ class _SettingsState extends State<Settings> {
                   ],
                 ),
                 SizedBox(height: 20),
+
                 // Row(
                 //   mainAxisAlignment: MainAxisAlignment.center,
                 //   children: [
@@ -163,10 +164,12 @@ class _SettingsState extends State<Settings> {
                 //     ),
                 //   ],
                 // ),
-
                 Column(
                   children: [
-                    Customcontainer(toptext: "Rate Our app", bottomtext: "FAQs")
+                    Customcontainer(
+                      toptext: "Rate Our app",
+                      bottomtext: "FAQs",
+                    ),
                   ],
                 ),
                 SizedBox(height: 20),
@@ -237,7 +240,10 @@ class _SettingsState extends State<Settings> {
                 // ),
                 Column(
                   children: [
-                    Customcontainer(toptext: "Email adress & password", bottomtext: "Deactivate account")
+                    Customcontainer(
+                      toptext: "Email adress & password",
+                      bottomtext: "Deactivate account",
+                    ),
                   ],
                 ),
                 SizedBox(height: 20),
